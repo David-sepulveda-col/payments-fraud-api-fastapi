@@ -22,7 +22,6 @@ Un e‑commerce en crecimiento sufría **intentos de fraude** (tarjetas robadas,
 ---
 
 ## 2) Arquitectura
-<pre>
 ```mermaid
 flowchart LR
   Client -->|JWT| API[FastAPI]
@@ -37,7 +36,6 @@ flowchart LR
     O --> D
   end```
 
-</pre>
 **Decisiones técnicas clave**
 - **FastAPI** por rendimiento y DX.
 - **SQLAlchemy 2.0** para ORM moderno y tipado, compatible con Postgres/SQLite.
