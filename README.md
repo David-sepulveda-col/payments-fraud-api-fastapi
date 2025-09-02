@@ -22,22 +22,7 @@ Un e‑commerce en crecimiento sufría **intentos de fraude** (tarjetas robadas,
 ---
 
 ## 2) Arquitectura
-<pre>
-mermaid
-flowchart LR
-  Client -->|JWT| API[FastAPI]
-  API --> SEC[Security/JWT]
-  API --> DB[(Postgres/SQLite)]
-  API --> FRAUD[Fraud Engine]
-
-  subgraph Fraud Engine
-    R[Rules]
-    O[Outlier check (ticket vs avg)]
-    R --> D[Decision: approve/review/reject]
-    O --> D
-  end
-
-</pre>
+<pre> ```mermaid flowchart LR Client -->|JWT| API[FastAPI] API --> SEC[Security/JWT] API --> DB[(Postgres/SQLite)] API --> FRAUD[Fraud Engine] subgraph Fraud Engine R[Rules] O[Outlier check (ticket vs avg)] R --> D[Decision: approve/review/reject] O --> D end ``` </pre>
 
 **Decisiones técnicas clave**
 - **FastAPI** por rendimiento y DX.
