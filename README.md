@@ -36,6 +36,8 @@ flowchart LR
     O --> D
   end```
 
+---
+
 **Decisiones técnicas clave**
 - **FastAPI** por rendimiento y DX.
 - **SQLAlchemy 2.0** para ORM moderno y tipado, compatible con Postgres/SQLite.
