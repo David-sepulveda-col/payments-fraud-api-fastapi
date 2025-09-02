@@ -31,7 +31,7 @@ flowchart LR
 
   subgraph Fraud Engine
     R[Rules]
-    O[Outlier check (ticket vs avg)]
+    O[Outlier check: ticket vs avg]
     R --> D[Decision: approve/review/reject]
     O --> D
   end```
