@@ -25,14 +25,14 @@ Un e‑commerce en crecimiento sufría **intentos de fraude** (tarjetas robadas,
 ```mermaid
 flowchart LR
   Client -->|JWT| API[FastAPI]
-  API --> SEC[Security/JWT]
-  API --> DB[(Postgres/SQLite)]
+  API --> SEC[Security and JWT]
+  API --> DB[(Postgres or SQLite)]
   API --> FRAUD[Fraud Engine]
 
   subgraph Fraud Engine
     R[Rules]
-    O[Outlier check: ticket vs avg]
-    R --> D[Decision: approve/review/reject]
+    O[Outlier check - ticket vs avg]
+    R --> D[Decision approve - review - reject]
     O --> D
   end```
 
